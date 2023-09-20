@@ -6,7 +6,7 @@
 /*   By: marcoalv <marcoalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 11:16:41 by marcoalv          #+#    #+#             */
-/*   Updated: 2023/09/20 14:37:14 by marcoalv         ###   ########.fr       */
+/*   Updated: 2023/09/20 14:52:39 by marcoalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@
 int		ft_printf(char const *, ...);
 int		ft_putnbr(int n, int fd);
 int		ft_putchar(char c, int fd);
-int		ft_formats(char c, va_list args);
+int		ft_formats(const char *c, va_list args);
 #endif
