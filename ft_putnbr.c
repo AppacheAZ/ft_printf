@@ -1,24 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcoalv <marcoalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/19 11:16:41 by marcoalv          #+#    #+#             */
-/*   Updated: 2023/09/20 14:37:14 by marcoalv         ###   ########.fr       */
+/*   Created: 2023/09/20 13:46:11 by marcoalv          #+#    #+#             */
+/*   Updated: 2023/09/20 14:03:34 by marcoalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-#define PRINTF_H
+#include "printf.h"
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdarg.h>
+int	ft_putnbr(int n, int fd)
+{
+	char	c;
 
-int		ft_printf(char const *, ...);
-int		ft_putnbr(int n, int fd);
-int		ft_putchar(char c, int fd);
-int		ft_formats(char c, va_list args);
-#endif
+	c = '0';
+	if (n == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
+		return (write(fd, "-2147483648", 11));
+	}
+	else if (n < 0)
+	{
+		write(fd, "-", 1);
+		n = -n;
+	}
+	if (n >= 0 && n <= 9)
+	{
+		c = n + '0';
+		write(fd, &c, 1);
+	}
+	else
+	{
+		ft_putnbr(n / 10, fd);
+		c = (n % 10) + '0';
+		write(fd, &c, 1);
+	}
+    return (write(fd, &c, 1));
+}

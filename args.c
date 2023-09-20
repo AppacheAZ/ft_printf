@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include <unistd.h>
 
 int sumar(int c, ...) {
     int suma = 0;
@@ -19,7 +20,9 @@ int sumar(int c, ...) {
 }
 
 int main() {
-    int resultado = sumar(5, 'q', 20, 30, 40, 100);
-    printf("La suma es: %d\n", resultado);
+    int resultado = sumar(5, 20, 30, 40, 100);
+    printf("La suma es: %d\n\n", resultado);
+    printf("El return de printf es: %d\n", printf(""));
+    printf("El return de printf es: %d\n", printf("\n"));
     return 0;
 }

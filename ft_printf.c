@@ -6,7 +6,7 @@
 /*   By: marcoalv <marcoalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 11:15:58 by marcoalv          #+#    #+#             */
-/*   Updated: 2023/09/19 15:37:50 by marcoalv         ###   ########.fr       */
+/*   Updated: 2023/09/20 14:48:24 by marcoalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ int ft_printf(const char *format, ...)
     int printed_chars;
 
     va_start(args, format);
-    printed_chars = ft_vprintf(format, args);
+    //funcion que lea los formatos e imprima, acorde a la posicion de los argumentos
+    printed_chars = 0;
     va_end(args);
     return (printed_chars);
 }

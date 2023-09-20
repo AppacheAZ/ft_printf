@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_formats.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcoalv <marcoalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/19 11:16:41 by marcoalv          #+#    #+#             */
-/*   Updated: 2023/09/20 14:37:14 by marcoalv         ###   ########.fr       */
+/*   Created: 2023/09/20 14:35:24 by marcoalv          #+#    #+#             */
+/*   Updated: 2023/09/20 14:35:58 by marcoalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-#define PRINTF_H
+#include "printf.h"
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdarg.h>
+int	ft_formats(char c, va_list args)
+{
+    int printed_chars;
 
-int		ft_printf(char const *, ...);
-int		ft_putnbr(int n, int fd);
-int		ft_putchar(char c, int fd);
-int		ft_formats(char c, va_list args);
-#endif
+    printed_chars = 0;
+    if (c == 'd' || c == 'i')
+        printed_chars += ft_putnbr(va_arg(args, int), 1);
+    else if (c == 'c')
+        printed_chars += ft_putchar(va_arg(args, int), 1);
+    return (printed_chars);
+}
