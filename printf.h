@@ -18,6 +18,7 @@
 #include <stdarg.h>
 
 int		ft_printf(char const *, ...);
+int		ft_putstr(char *s, int fd);
 int		ft_putnbr(int n, int fd);
 int		ft_putchar(char c, int fd);
 int		ft_formats(const char *c, va_list args);

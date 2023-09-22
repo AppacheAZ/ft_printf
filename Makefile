@@ -18,7 +18,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 DIR = ./
 
-FILES = ft_putnbr ft_printf
+FILES = ft_putnbr ft_putchar ft_format ft_putstr ft_printf 
 
 SOURCES = $(addprefix $(DIR), $(addsuffix .c, $(FILES)))
 OBJECTS = $(addprefix $(DIR), $(addsuffix .o, $(FILES)))

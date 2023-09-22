@@ -22,12 +22,14 @@ int	ft_formats(const char *c, va_list args)
         if (*c == '%')
         {
             c++;
-            if (*c == 'd')
-                printed_chars += ft_putnbr(va_arg(args, int), 1);
-            else if (*c == 'c')
+            if (*c == 'c')
                 printed_chars += ft_putchar(va_arg(args, int), 1);
-            /*else if (*c == '%')
-                write(1, '%', 1);*/
+            else if (*c == 's')
+                printed_chars += ft_putstr(va_arg(args, char *), 1);
+            else if (*c == 'd' || *c == 'i')
+                printed_chars += ft_putnbr(va_arg(args, int), 1);
+            else if (*c == '%')
+                printed_chars += ft_putchar('%', 1);
         }
         else
             printed_chars += ft_putchar(*c, 1);

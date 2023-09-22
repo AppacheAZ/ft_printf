@@ -18,6 +18,7 @@ int	ft_putnbr(int n, int fd)
     int		i;
 
 	c = '0';
+	i = 0;
 	if (n == -2147483648)
 	{
 		i = write(fd, "-2147483648", 11);

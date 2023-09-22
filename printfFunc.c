@@ -16,5 +16,6 @@ int main(){
     printf("hexadecimal:  %x \n", eje_hex);
     printf("HEXADECIMAL:  %X \n", eje_hex);
     printf("percent:      %% \n\n");
+    printf("f");
     return 0;
 }

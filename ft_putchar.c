@@ -15,6 +15,7 @@
 int	ft_putchar(char c, int fd)
 {
     int i;
+    i = 0;
 	write(fd, &c, 1);
     i += 1;
     return (i);

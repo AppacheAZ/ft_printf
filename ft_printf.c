@@ -20,7 +20,7 @@ int ft_printf(const char *format, ...)
 
     va_start(args, format);
     //funcion que lea los formatos e imprima, acorde a la posicion de los argumentos
-    printed_chars += ft_formats(format, args);
+    printed_chars = ft_formats(format, args);
     va_end(args);
     return (printed_chars);
 }
@@ -30,9 +30,9 @@ int main(void)
     int myft;
     int real;
     
-    myft = ft_printf("Hola %d\n", 5);
-    real = printf("Hola %d\n", 5);
+    myft = ft_printf("Hol%c %s %d%i %%\n", 'a', "mundo", 4, 2);
+    real = printf("Hol%c %s %d%i %%\n", 'a', "mundo", 4, 2);
 
-    printf("\nmyft: %d\nreal: %d", myft, real);
+    printf("\nmyft: %d\nreal: %d\n", myft, real);
     return (0);
 }
