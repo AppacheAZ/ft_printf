@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marcoalv <marcoalv@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/22 16:27:08 by marcoalv          #+#    #+#             */
+/*   Updated: 2023/09/22 20:21:24 by marcoalv         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "printf.h"
 
-unsigned long	ft_strlen(const char *s)
+static unsigned long	ft_strlen(const char *s)
 {
 	int	i;
 

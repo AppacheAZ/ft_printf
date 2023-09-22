@@ -6,16 +6,27 @@
 /*   By: marcoalv <marcoalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 13:46:11 by marcoalv          #+#    #+#             */
-/*   Updated: 2023/09/20 15:24:38 by marcoalv         ###   ########.fr       */
+/*   Updated: 2023/09/22 21:02:06 by marcoalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
+static int	ft_putnbr_aux(int n, int fd)
+{
+	int		i;
+	char	c;
+
+	i += ft_putnbr(n / 10, fd);
+	c = (n % 10) + '0';
+	i += write(fd, &c, 1);
+	return (i);
+}
+
 int	ft_putnbr(int n, int fd)
 {
 	char	c;
-    int		i;
+	int		i;
 
 	c = '0';
 	i = 0;
@@ -36,9 +47,7 @@ int	ft_putnbr(int n, int fd)
 	}
 	else
 	{
-		i += ft_putnbr(n / 10, fd);
-		c = (n % 10) + '0';
-		i += write(fd, &c, 1);
+		i += ft_putnbr_aux(n, fd);
 	}
-    return (i);
+	return (i);
 }

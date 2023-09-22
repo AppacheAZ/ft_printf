@@ -21,8 +21,9 @@ int sumar(int c, ...) {
 
 int main() {
     int resultado = sumar(5, 20, 30, 40, 100);
+    char *s = "Hola";
     printf("La suma es: %d\n\n", resultado);
-    printf("El return de printf es: %d\n", printf(""));
-    printf("El return de printf es: %d\n", printf("\n"));
+
+    write(1, &s, 10000);
     return 0;
 }

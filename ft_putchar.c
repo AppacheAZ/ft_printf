@@ -6,7 +6,7 @@
 /*   By: marcoalv <marcoalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 14:00:46 by marcoalv          #+#    #+#             */
-/*   Updated: 2023/09/20 15:22:24 by marcoalv         ###   ########.fr       */
+/*   Updated: 2023/09/22 20:39:19 by marcoalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 int	ft_putchar(char c, int fd)
 {
-    int i;
-    i = 0;
+	int		i;
+
+	i = 0;
 	write(fd, &c, 1);
-    i += 1;
-    return (i);
+	i += 1;
+	return (i);
 }
