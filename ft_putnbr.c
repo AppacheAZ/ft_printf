@@ -6,11 +6,11 @@
 /*   By: marcoalv <marcoalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 13:46:11 by marcoalv          #+#    #+#             */
-/*   Updated: 2023/09/24 17:08:56 by marcoalv         ###   ########.fr       */
+/*   Updated: 2023/09/24 20:49:40 by marcoalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static int	ft_putnbr_aux(int n, int fd)
 {

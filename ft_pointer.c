@@ -6,11 +6,11 @@
 /*   By: marcoalv <marcoalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 21:05:33 by marcoalv          #+#    #+#             */
-/*   Updated: 2023/09/24 20:23:08 by marcoalv         ###   ########.fr       */
+/*   Updated: 2023/09/24 20:49:27 by marcoalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static int	ft_len_num(unsigned long n)
 {
@@ -69,7 +69,6 @@ int	ft_hex_ptr(unsigned long n, int fd, const char *mod)
 int	ft_pointer(void *dir, int fd)
 {
 	int				printed_chars;
-	char			*str;
 	unsigned long	ptr_address;
 
 	printed_chars = 0;

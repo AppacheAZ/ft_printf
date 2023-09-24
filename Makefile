@@ -6,19 +6,19 @@
 #    By: marcoalv <marcoalv@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/19 10:41:20 by marcoalv          #+#    #+#              #
-#    Updated: 2023/09/24 17:09:42 by marcoalv         ###   ########.fr        #
+#    Updated: 2023/09/24 21:04:21 by marcoalv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = printf.a
-INCLUDE = printf.h
+NAME = libftprintf.a
+INCLUDE = ft_printf.h
 
 LIB = ar rcs
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 DIR = ./
 
-FILES = ft_putnbr ft_putchar ft_formats ft_putstr ft_hex ft_printf 
+FILES = ft_putnbr ft_putchar ft_formats ft_putstr ft_hex ft_printf ft_pointer
 
 SOURCES = $(addprefix $(DIR), $(addsuffix .c, $(FILES)))
 OBJECTS = $(addprefix $(DIR), $(addsuffix .o, $(FILES)))

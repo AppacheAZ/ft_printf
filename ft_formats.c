@@ -6,11 +6,11 @@
 /*   By: marcoalv <marcoalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 14:35:24 by marcoalv          #+#    #+#             */
-/*   Updated: 2023/09/24 20:32:53 by marcoalv         ###   ########.fr       */
+/*   Updated: 2023/09/24 20:49:19 by marcoalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_format_sings(const char *c, va_list args)
 {

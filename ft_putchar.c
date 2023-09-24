@@ -6,11 +6,11 @@
 /*   By: marcoalv <marcoalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 14:00:46 by marcoalv          #+#    #+#             */
-/*   Updated: 2023/09/22 20:39:19 by marcoalv         ###   ########.fr       */
+/*   Updated: 2023/09/24 20:49:36 by marcoalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putchar(char c, int fd)
 {

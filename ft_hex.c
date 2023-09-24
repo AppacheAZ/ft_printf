@@ -6,11 +6,11 @@
 /*   By: marcoalv <marcoalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 16:25:46 by marcoalv          #+#    #+#             */
-/*   Updated: 2023/09/24 20:17:59 by marcoalv         ###   ########.fr       */
+/*   Updated: 2023/09/24 20:49:23 by marcoalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static int	ft_len_num(unsigned int n)
 {
