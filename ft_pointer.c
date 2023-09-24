@@ -6,7 +6,7 @@
 /*   By: marcoalv <marcoalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 21:05:33 by marcoalv          #+#    #+#             */
-/*   Updated: 2023/09/24 20:49:27 by marcoalv         ###   ########.fr       */
+/*   Updated: 2023/09/24 21:19:51 by marcoalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,11 @@ int	ft_pointer(void *dir, int fd)
 	unsigned long	ptr_address;
 
 	printed_chars = 0;
+	if (!dir)
+	{
+		printed_chars += write(fd, "0x0", 3);
+		return (printed_chars);
+	}
 	ptr_address = (unsigned long)dir;
 	printed_chars += write(fd, "0x", 2);
 	printed_chars += ft_hex_ptr(ptr_address, fd, "x");

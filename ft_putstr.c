@@ -6,7 +6,7 @@
 /*   By: marcoalv <marcoalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 16:27:08 by marcoalv          #+#    #+#             */
-/*   Updated: 2023/09/24 20:49:44 by marcoalv         ###   ########.fr       */
+/*   Updated: 2023/09/24 21:30:01 by marcoalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ int	ft_putstr(char *s, int fd)
 {
 	size_t	n;
 	int		i;
-
+	
+	if (!s)
+		return(write(fd, "(null)", 6));
+	
 	n = ft_strlen(s);
 	i = 0;
 	while (n--)
