@@ -6,7 +6,7 @@
 /*   By: marcoalv <marcoalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 13:46:11 by marcoalv          #+#    #+#             */
-/*   Updated: 2023/09/22 21:02:06 by marcoalv         ###   ########.fr       */
+/*   Updated: 2023/09/24 17:08:56 by marcoalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ static int	ft_putnbr_aux(int n, int fd)
 	int		i;
 	char	c;
 
+	i = 0;
 	i += ft_putnbr(n / 10, fd);
 	c = (n % 10) + '0';
 	i += write(fd, &c, 1);

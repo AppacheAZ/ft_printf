@@ -6,7 +6,7 @@
 /*   By: marcoalv <marcoalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 11:15:58 by marcoalv          #+#    #+#             */
-/*   Updated: 2023/09/22 20:55:24 by marcoalv         ###   ########.fr       */
+/*   Updated: 2023/09/24 20:34:34 by marcoalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,10 @@ int main(void)
 {
     int myft;
     int real;
+    char *str = "hola";
     
-    myft = ft_printf("myft: Hol%c %s %d%i %x %X %%\n", 'a', "mundo", 4, 2, 33, 115);
-    real = printf("real: Hol%c %s %d%i %x %X %%\n", 'a', "mundo", 4, 2, 33, 115);
+    myft = ft_printf("myft: Hol%c %s %p %d%i %u %x %X %%\n", 'a', "mundo", str, 4, 2, -42, 31, 232988557);
+    real = printf("real: Hol%c %s %p %d%i %u %x %X %%\n", 'a', "mundo", str, 4, 2, -42, 31, 232988557);
 
     printf("\nmyft: %d\nreal: %d\n", myft, real);
     return (0);

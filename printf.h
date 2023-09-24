@@ -6,7 +6,7 @@
 /*   By: marcoalv <marcoalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 11:16:41 by marcoalv          #+#    #+#             */
-/*   Updated: 2023/09/22 21:16:03 by marcoalv         ###   ########.fr       */
+/*   Updated: 2023/09/24 19:58:59 by marcoalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ int		ft_putnbr(int n, int fd);
 int		ft_putchar(char c, int fd);
 int		ft_formats(const char *c, va_list args);
 int		ft_hex(unsigned int n, int fd, const char *mod);
-/*int		ft_pointer(void *dir, 1);*/
+int		ft_pointer(void *dir, int fd);
 #endif

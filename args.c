@@ -21,9 +21,12 @@ int sumar(int c, ...) {
 
 int main() {
     int resultado = sumar(5, 20, 30, 40, 100);
-    char *s = "Hola";
-    printf("La suma es: %d\n\n", resultado);
+    int s = 423;
+    int *puntero = &s;
+    char direccion[20];
 
-    write(1, &s, 10000);
+    //sprintf(direccion, "%p", puntero);
+    printf("La suma es: %d\n\n", resultado);
+    write(STDOUT_FILENO, direccion, 11);
     return 0;
 }

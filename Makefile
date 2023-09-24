@@ -6,7 +6,7 @@
 #    By: marcoalv <marcoalv@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/19 10:41:20 by marcoalv          #+#    #+#              #
-#    Updated: 2023/09/22 16:26:20 by marcoalv         ###   ########.fr        #
+#    Updated: 2023/09/24 17:09:42 by marcoalv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 DIR = ./
 
-FILES = ft_putnbr ft_putchar ft_format ft_putstr ft_hex ft_printf 
+FILES = ft_putnbr ft_putchar ft_formats ft_putstr ft_hex ft_printf 
 
 SOURCES = $(addprefix $(DIR), $(addsuffix .c, $(FILES)))
 OBJECTS = $(addprefix $(DIR), $(addsuffix .o, $(FILES)))
