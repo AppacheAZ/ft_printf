@@ -6,7 +6,7 @@
 /*   By: marcoalv <marcoalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 14:35:24 by marcoalv          #+#    #+#             */
-/*   Updated: 2023/09/24 20:49:19 by marcoalv         ###   ########.fr       */
+/*   Updated: 2023/09/25 21:44:50 by marcoalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,13 @@ int	ft_format_sings(const char *c, va_list args)
 	else if (*c == 'd' || *c == 'i')
 		printed_chars += ft_putnbr(va_arg(args, int), 1);
 	else if (*c == 'u')
-		printed_chars += ft_putnbr(va_arg(args, unsigned int), 1);
+		printed_chars += ft_putnbr_unsigned(va_arg(args, unsigned int), 1);
 	else if (*c == 'x' || *c == 'X')
 		printed_chars += ft_hex(va_arg(args, unsigned int), 1, c);
 	else if (*c == '%')
 		printed_chars += ft_putchar('%', 1);
+	if (printed_chars < 0)
+		return (-1);
 	return (printed_chars);
 }
 
@@ -45,9 +47,15 @@ int	ft_formats(const char *c, va_list args)
 		{
 			c++;
 			printed_chars += ft_format_sings(c, args);
+			if (printed_chars < 0)
+				return (-1);
 		}
 		else
+		{
 			printed_chars += ft_putchar(*c, 1);
+			if (printed_chars < 0)
+				return (-1);
+		}
 		c++;
 	}
 	return (printed_chars);
