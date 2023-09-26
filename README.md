@@ -18,15 +18,13 @@ this prototype have the following formats:
 
 To compile the library, run `make` in the root of the repository. This will create a `libftprintf.a` file that you can link to your project.
 Use the following command to clean the object files:
-`make clean` to clean the object files
-`make fclean` to clean the object files and the library
-`make re` to recompile the library
-To see what does the Makefile do, use the following command: `make -n`
+`make clean` to clean the object files, `make fclean` to clean the object files and the library, `make re` to recompile the library and to see what does the Makefile do, use the following command: `make -n`
 
 ## Example
 To test the library, you can use the following code:
 <pre><code>
 #include "ft_printf.h"
+#include <stdio.h>
 int main(void)
 {
     int myft;
